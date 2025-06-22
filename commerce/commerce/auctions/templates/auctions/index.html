@@ -3,5 +3,13 @@
 {% block body %}
     <h2>Active Listings</h2>
 
+
+            {% if user.is_authenticated %}
+                Signed in as <strong>{{ user.username }}</strong>.
+            {% else %}
+                Not signed in.
+            {% endif %}
+
+
     TODO
 {% endblock %}
