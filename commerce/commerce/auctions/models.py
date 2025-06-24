@@ -22,3 +22,4 @@ class Listing(models.Model):
 class Comment(models.Model):
     comment = models.TextField()
     time_stamp = models.DateTimeField()
+    listing = models.ForeignKey(Listing, on_delete=models.CASCADE, related_name="comments")
